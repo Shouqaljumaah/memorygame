@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Cards from "./component/Cards";
+import cardsData from "./component/cardsData";
+import "./App.css";
+// import cardslist from "./component/CardList";
+import { useState } from "react";
 
 function App() {
+  // const [counter, setCounter] = useState(0);
+  const cardslist = cardsData.map((card, index) => <Cards mycard={card} />);
+
+  // const playAgain = () => {
+  //   if ()
+  //   setCounter(0);
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="App">
+        <h1>Magic Cards</h1>
+        {/* <img src={cardsData}></img> */}
+        <button> Paly Again</button>
+        <div className="flex1">{cardslist}</div>
+      </div>
     </div>
   );
 }

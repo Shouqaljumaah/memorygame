@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+tr:nth-child(even) {
+  background-color: hsl(234, 16%, 65%);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
